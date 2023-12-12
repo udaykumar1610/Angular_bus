@@ -1,0 +1,19 @@
+<div *ngFor="let schedule of bookedSchedules">
+    <div>
+      <h4>{{ schedule.passengerName }}</h4>
+      <p>Date: {{ schedule.scheduleDate }}</p>
+      <p>Details: {{ schedule.details }}</p>
+      <p>Payment Status: {{ schedule.paymentStatus }}</p>
+  
+      <!-- <form (submit)="updateDetailsAndPaymentStatus(schedule.id, updatedDetails.value, updatedPaymentStatus.value)">
+        <label for="updatedDetails">Updated Details:</label>
+        <input type="text" id="updatedDetails" [(ngModel)]="schedule.updatedDetails" #updatedDetails required>
+  
+        <label for="updatedPaymentStatus">Updated Payment Status:</label>
+        <input type="text" id="updatedPaymentStatus" [(ngModel)]="schedule.updatedPaymentStatus" #updatedPaymentStatus required>
+  
+        <button type="submit">Update</button> -->
+      <!-- </form> -->
+    </div>
+  </div>
+  

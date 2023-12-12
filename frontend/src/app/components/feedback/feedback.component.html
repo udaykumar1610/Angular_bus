@@ -1,0 +1,30 @@
+<body class="bg">
+    <div class="feedback-form mb-4">
+      <h2>Bus Booking System Feedback Form</h2>
+      <form action="submit_feedback.php" method="post">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone"><br><br>
+        </fieldset>
+    
+        <fieldset>
+          <legend>Booking Experience</legend>
+          <!-- Include other questions here based on the template -->
+          <!-- Example: -->
+          <label for="navigate">How easy was it to navigate our booking platform?</label>
+          <input type="number" id="navigate" name="navigate" min="1" max="5"><br><br>
+          <legend>Additional Comments</legend>
+          <label for="comments">Any additional feedback or suggestions to improve our bus booking system:</label><br>
+          <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+    
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    
+    </body>

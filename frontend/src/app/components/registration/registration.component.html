@@ -1,0 +1,54 @@
+
+<div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 shadow-lg">
+        <h2 class="mb-4">Registration</h2>
+        <form (ngSubmit)="submitRegistration()" #registrationForm="ngForm" novalidate>
+          
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" [(ngModel)]="user.fullName" required>
+            <div *ngIf="registrationForm.controls['fullName'].invalid && (registrationForm.controls['fullName'].dirty || registrationForm.controls['fullName'].touched)">
+              <small class="text-danger">Please enter your full name.</small>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required>
+            <div *ngIf="registrationForm.controls['email'].invalid && (registrationForm.controls['email'].dirty || registrationForm.controls['email'].touched)">
+              <small class="text-danger">Please enter a valid email address.</small>
+            </div>
+          </div>
+  
+         
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" required minlength="6">
+            <div *ngIf="registrationForm.controls['password'].invalid && (registrationForm.controls['password'].dirty || registrationForm.controls['password'].touched)">
+              <small class="text-danger">Password must be at least 6 characters long.</small>
+            </div>
+          </div>
+  
+          
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" [(ngModel)]="user.confirmPassword" required minlength="6">
+            <div *ngIf="registrationForm.controls['confirmPassword'].invalid && (registrationForm.controls['confirmPassword'].dirty || registrationForm.controls['confirmPassword'].touched)">
+              <small class="text-danger">Passwords do not match.</small>
+            </div>
+          </div>
+          
+            <button type="submit" class="btn btn-primary" >Register</button> 
+  
+            
+          <!-- [disabled]="registrationForm.invalid -->
+          
+        </form>
+        <a href="/login"><h3 class="text-indigo-600">LogIn!</h3></a>
+      </div>
+    </div>
+  </div>
+  
+</div>

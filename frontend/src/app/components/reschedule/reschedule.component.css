@@ -1,0 +1,56 @@
+/* 
+.container {
+    margin: 30px;
+  }
+ 
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+ 
+  .table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+ 
+  .table th {
+    background-color: #020202;
+    color: white;
+  }
+ 
+ 
+ 
+  .modal-dialog {
+    margin: 50px auto;
+    width: 30%;
+  }
+ 
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+  }
+ 
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: red;
+  }
+  .heading{
+    font-size: larger;
+  }
+  .btn1{
+    background-color: rgb(3, 195, 248);
+  }
+ 
+  .modal-title{
+    font-size: 25px;
+  } */

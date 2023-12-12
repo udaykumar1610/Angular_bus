@@ -1,0 +1,57 @@
+.body{
+  background-image: url('https://th.bing.com/th/id/OIP.4odgvVBqfLLq5vL_ECmJZgHaFj?w=238&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+  margin-top: 0px;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.container {
+    max-width: 600px;
+    margin:0px 500px 90px 500px
+    
+  }
+  
+  form {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    border: 2px solid rgb(57, 56, 55);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  
+
+  
+  h3 {
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .data{
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }

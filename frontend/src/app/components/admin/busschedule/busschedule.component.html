@@ -1,0 +1,67 @@
+
+<head>
+    <title>BUS BOOKING </title>
+  
+  <style>
+    body{
+      background-color: pink;
+      
+    }
+  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<div class="container">
+    <h2 style="text-align: center;">Bus Route Schedules</h2>
+    <table class="table table-border table-stripe">
+      <thead>
+        <tr>
+          <th>Route Name</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let schedule of schedules">
+          <td>{{ schedule.routeName }}</td>
+          <td>{{ schedule.departureTime }}</td>
+          <td>{{ schedule.arrivalTime }}</td>
+          <td>{{ schedule.date | date: 'shortDate' }}</td>
+          <td>
+           
+            <button (click)="deleteSchedule(schedule.id)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <h3>Add New Schedule</h3>
+    <form #scheduleForm="ngForm" (ngSubmit)="addSchedule(scheduleForm.value)">
+      <label for="routeName">Route Name:</label>
+      <input type="text" id="routeName" name="routeName" ngModel required>
+  
+      <label for="departureTime">Departure Time:</label>
+      <input type="text" id="departureTime" name="departureTime" ngModel required>
+  
+      <label for="arrivalTime">Arrival Time:</label>
+      <input type="text" id="arrivalTime" name="arrivalTime" ngModel required>
+  
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" ngModel required>
+  
+      <button type="submit">Add Schedule</button>
+    </form>
+  </div>
+  

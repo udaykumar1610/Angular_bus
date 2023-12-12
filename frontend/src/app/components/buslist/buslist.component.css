@@ -1,0 +1,70 @@
+
+/* bus-management.component.css */
+ 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d8a1a1;
+}
+ 
+header {
+  background-color: #333;
+  color: #b41414;
+  text-align: center;
+  padding: 10px;
+}
+ 
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+ 
+form {
+  margin-bottom: 20px;
+}
+ 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+ 
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+ 
+th {
+  background-color: #333;
+  color: #ffffff;
+}
+ 
+ 
+button {
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+}
+ 
+button:disabled {
+  background-color: #9f90dbe6;
+  cursor: not-allowed;
+}
+.bg{
+  background-image: url('https://t4.ftcdn.net/jpg/01/25/38/13/240_F_125381331_6BtDt5GgnVFHMH44yRsRyKxzJI3biCof.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+ .alert-fixed-top-right {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+ 
+  z-index: 1000; /* Adjust the z-index as needed to ensure it appears above other elements */
+}
+ 
+ 

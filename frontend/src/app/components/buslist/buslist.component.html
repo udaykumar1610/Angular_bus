@@ -1,0 +1,84 @@
+
+<!-- bus-management.component.html -->
+<div class="bg">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Bus Management List</h1>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="searchTerm" name="searchTerm" [(ngModel)]="searchTerm" placeholder="Search...">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="onAddEditToggle()">Add Bus</button>
+          </div>
+        </div>
+        <form (ngSubmit)="onSubmit()" #busForm="ngForm">
+          <div *ngIf="isAddingOrEditing">
+            <div class="mb-3">
+              <label for="busName" class="form-label">Bus Name:</label>
+              <input type="text" class="form-control" id="busName" name="busName" [(ngModel)]="model.busName" required>
+            </div>
+ 
+            <div class="mb-3">
+              <label for="busNumber" class="form-label">Bus Number:</label>
+              <input type="text" class="form-control" id="busNumber" name="busNumber" [(ngModel)]="model.busNumber" required>
+            </div>
+ 
+            <div class="mb-3">
+              <label for="startPlace" class="form-label">Start Place:</label>
+              <input type="text" class="form-control" id="startPlace" name="startPlace" [(ngModel)]="model.startPlace" required>
+            </div>
+ 
+            <div class="mb-3">
+              <label for="destinationPlace" class="form-label">Destination Place:</label>
+              <input type="text" class="form-control" id="destinationPlace" name="destinationPlace" [(ngModel)]="model.destinationPlace" required>
+            </div>
+            <button type="submit" class="btn btn-success" [disabled]="busForm.invalid">Save</button>
+            <button type="button" class="btn btn-secondary" (click)="onAddEditToggle()">Cancel</button>
+          </div>
+        </form>
+ 
+        <!-- Add Bus Success Alert -->
+        <div *ngIf="addBusSuccess" class="alert alert-success alert-fixed-top-right" role="alert">
+          Add Bus Successful
+        </div>
+ 
+        <!-- Edit Bus Success Alert -->
+        <div *ngIf="editBusSuccess" class="alert alert-success alert-fixed-top-right" role="alert">
+          Edit Bus Successful
+        </div>
+ 
+        <!-- Delete Bus uccess Alert -->
+        <div *ngIf="deleteBusSuccess" class="alert alert-success alert-fixed-top-right" role="alert">
+          Delete Bus Successful
+        </div>
+       
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Serial </th> <!-- Add this line for the serial number column -->
+              <th>Bus Name</th>
+              <th>Bus Number</th>
+              <th>Start Place</th>
+              <th>Destination Place</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bus of filteredBuses; let i = index">
+              <td>{{ i + 1 }}</td> <!-- Display the serial number -->
+              <td>{{ bus.busName }}</td>
+              <td>{{ bus.busNumber }}</td>
+              <td>{{ bus.startPlace }}</td>
+              <td>{{ bus.destinationPlace }}</td>
+              <td>
+                <button class="btn btn-sm btn-primary" (click)="editBus(i)">Edit</button>
+                <button class="btn btn-sm btn-danger" (click)="deleteBus(i)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+ 

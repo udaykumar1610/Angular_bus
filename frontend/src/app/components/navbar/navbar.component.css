@@ -1,0 +1,48 @@
+
+#mypage{
+    
+    border-radius: 15px;
+   
+    text-align: center;
+    height: 40%;
+    margin: 0%;
+}
+
+ 
+/* 
+header{
+  
+    padding: 0;
+    border-bottom: 1px solid #e72929 ;
+}
+a{
+    color: black;
+ 
+    margin: 5px ;
+    padding: 5px;
+   
+}
+a:hover{
+   
+    color: white;
+}
+.container{
+    background-color: rgb(96, 134, 170);
+    margin: 0 auto;
+    display: flex;
+    border-radius: 10px;
+    
+}
+a.logo{
+    font-weight:  bold;
+    padding: 1em;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+}
+nav ul li a{
+    padding: 1em;
+    display: inline-block;
+}
+ */

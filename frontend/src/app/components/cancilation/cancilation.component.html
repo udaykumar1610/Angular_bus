@@ -1,0 +1,44 @@
+
+<div class="container mt-4">
+    <h2>Bus-Cancellation</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Bus_Number</th>
+          <th>Bus</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ task.busno }}</td>
+          <td>{{ task.bus }}</td>
+          <td>{{ task.from}}</td>
+          <td>{{ task.to }}</td>
+          <td>{{ task.date}}</td>
+          <td>{{ task.time}}</td>
+         
+           <td>
+            <button class="btn btn-danger" (click)="deleteTask(i)">Cancellation</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+ 
+   
+ 
+    <!-- Delete Alert -->
+    <div class="alert alert-danger" role="alert" *ngIf="showDeleteAlert">
+      <p>Are you ready to Cancel {{ selectedTask.busno }} From: {{ selectedTask.from }} To: {{ selectedTask.to }}?</p>
+      <p><strong>Amount is Refunded to you account **** **** **** 1234 Whith in a week</strong></p>
+ 
+      <button type="button" class="btn btn-danger" (click)="deleteConfirmed()">Yes, Delete</button>
+      <button type="button" class="btn btn-secondary" (click)="closeDeleteAlert()">Cancel</button>
+    </div>
+  </div>

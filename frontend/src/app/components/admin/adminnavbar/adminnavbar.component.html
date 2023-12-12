@@ -1,0 +1,28 @@
+<header>
+    <div class="container">
+        <p>Admin</p>
+        <a href="#" routerLink="/" class="logo">UNIQUE TRAVELLERS</a>
+        <nav>
+            <ul>
+                <li>
+                      
+            <a [routerLink]="['/home']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+            <a [routerLink]="['/adbook']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">BUS_BOOKING</a>
+            <a [routerLink]="['/buslist']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">BUS_LIST</a>
+         
+            <div class="w3-dropdown-hover w3-hide-small">
+              <button class="w3-button" title="Notifications">Registration <i class="fa fa-caret-down"></i></button>     
+              <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                <a routerLink="/register" class="w3-bar-item w3-button">Register</a>
+                <a routerLink="/login"class="w3-bar-item w3-button">Login</a>
+                <a routerLink="/login"class="w3-bar-item w3-button">LOGOUT</a>
+              </div>
+              </div>
+           
+                </li>
+            </ul>
+        </nav>
+    </div>
+     <router-outlet></router-outlet>  
+</header>
+

@@ -1,0 +1,63 @@
+
+<div class="container mt-4">
+    <h2>Reschedule</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Bus_no</th>
+          <th>Bus_Name</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{task.busno}}</td>
+          <td>{{ task.name }}</td>
+          <td>{{ task.from }}</td>
+          <td>{{ task.to }}</td>
+          <td>{{ task.date | date }}</td>
+          <td>{{task.time}}</td>
+          <td>
+            <button class="btn btn-primary btn1" (click)="openRescheduleModal(task)">Reschedule</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+ 
+   
+    <div class="modal" tabindex="-1" role="dialog" *ngIf="showRescheduleModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Are you sure want to reschedule?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeRescheduleModal()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body ">
+            <div class="form-group">
+              <label for="newDate">New Date:</label>
+              <input type="date" class="form-control" id="newDate" [(ngModel)]="editedTask.date">
+            </div>
+            <div class="form-group ">
+                <label for="newTime">New Time:</label>
+                <input type="time" class="form-control" id="newTime" [(ngModel)]="editedTask.time">
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="closeRescheduleModal()">Close</button>
+            <button type="button" class="btn btn-primary" (click)="rescheduleTask()">Reschedule</button>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+   
+ 
+   

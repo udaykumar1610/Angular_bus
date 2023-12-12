@@ -1,0 +1,42 @@
+
+<head>
+
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+
+
+<div class="bg">
+<div class="container">
+    <h2>Bus Seat Selection</h2>
+  
+    <div class="bus-layout">
+      <div *ngFor="let row of seatRows; let rowIndex = index" class="seat-row">
+        <div *ngFor="let seat of row; let seatIndex = index" class="seat" [class.selected]="isSeatSelected(rowIndex, seatIndex)" (click)="toggleSeat(rowIndex, seatIndex)">
+          {{ seat }}
+        </div>
+      </div>
+    </div>
+ 
+
+    <div class="selected-count">
+        <h1>Number of Selected Seats: {{ selectedSeatCount }}</h1>
+        <h1>price: {{ selectedSeatCount*500 }}</h1>
+      </div>
+
+
+      <a href="/payment">
+        <button class="btn btn-primary" (click)="bookSeats()">Book Selected Seats</button></a>
+  </div>
+</div>
